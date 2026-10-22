@@ -30,7 +30,7 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ mode }) => {
             } else {
                 await signin(email.trim(), password);
             }
-            router.replace("/dashboard");
+            router.push("/dashboard");
         } catch (error) {
             setCurrentError(error instanceof Error ? error.message : "Unable to authenticate. Please try again.");
         } finally {
